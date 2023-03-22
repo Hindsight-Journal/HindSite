@@ -7,6 +7,8 @@ nav_links:
     link: /
   - text: About
     link: FRAG_about
+  - text: Links
+    link: FRAG_links
   - text: Contact
     link: FRAG_contact
 
@@ -33,7 +35,7 @@ pages:
             - title: Sign Up For Our Newsletter
               link: https://journal2020.us4.list-manage.com/subscribe?id=d39e1a2b72&u=a7ccd0077e65cc361d854bcb8
       - title: Links
-        frag_link: contact
+        frag_link: links
         section_template: links.html
         metadata:
           - rows:
@@ -63,7 +65,7 @@ pages:
         frag_link: team
         section_template: staff.html
         metadata:
-          - data_dict: assets/staf.json
+          - data_dict: content/staff.json
           - video_link: assets/intro.mp4
           - footer_text: Made with ❤️ in Boulder, CO
 

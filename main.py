@@ -1,5 +1,6 @@
 import os
 import yaml
+import json
 from jinja2 import Environment, FileSystemLoader
 
 # Load the site.yaml file
@@ -30,6 +31,9 @@ for page in site_data["pages"]:
                     if "content_file" in meta.keys():
                         with open(meta["content_file"]) as content_file:
                             section["metadata"][idx]["content_file"] = content_file.read()
+                    elif "data_dict" in meta.keys():
+                        with open(meta["data_dict"]) as data_file:
+                            section["metadata"][idx]["data_dict"] = json.load(data_file)
                 except Exception as e:
                     print(f"Error processing {meta['content_file']}: {e}")
             section_template = env.get_template(section["section_template"])
