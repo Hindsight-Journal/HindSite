@@ -1,0 +1,69 @@
+site:
+  title: Changing Skies
+  description: Description for the website used for SEO purposes
+
+nav_links:
+  - text: Home
+    link: /
+  - text: About
+    link: FRAG_about
+  - text: Contact
+    link: FRAG_contact
+
+pages:
+  - title: Home
+    permalink: /
+    template: index.html
+    sections:
+      - title: Landing
+        section_template: banner_component.html
+        metadata:
+          - include_navbar: true
+          - banner_url: assets/banner.png
+          - banner_subtitle: Program for Writing and Rhetoric x Mission Zero
+      - title: Mission Statement
+        frag_link: about
+        section_template: mission_statement.html
+        metadata:
+          - background: assets/bg.jpg
+          - content_file: content/mission_statement.md
+          - buttons:
+            - title: Submit Your Writing & Art Here
+              link: https://journal2020.submittable.com/submit
+            - title: Sign Up For Our Newsletter
+              link: https://journal2020.us4.list-manage.com/subscribe?id=d39e1a2b72&u=a7ccd0077e65cc361d854bcb8
+      - title: Links
+        frag_link: contact
+        section_template: links.html
+        metadata:
+          - rows:
+              - row: "Socials & Friends"
+                sections:
+                  - title: "Our Socials"
+                    links:
+                      - link: https://www.instagram.com/hindsight.journal/
+                        icon: fa-instagram
+                        text: Instagram
+                      - link: https://twitter.com/cu_hindsight
+                        icon: fa-twitter
+                        text: Twitter
+                  - title: "Our Friends"
+                    links: 
+                      - link: https://hindsightjournal2020.com/
+                        text: Hindsight Journal
+                        icon: fa-book
+              - row: "Past Issues"
+                sections:
+                  - title: "Hindsight"
+                    links:
+                      - link: file:///Users/navanchauhan/Developer/CSTempWeb/assets/pdfs/hindsightv1.pdf
+                        text: Volume I (2021)
+                        icon: fa-book
+      - title: Our Staff
+        frag_link: team
+        section_template: staff.html
+        metadata:
+          - data_dict: assets/staf.json
+          - video_link: assets/intro.mp4
+          - footer_text: Made with ❤️ in Boulder, CO
+
